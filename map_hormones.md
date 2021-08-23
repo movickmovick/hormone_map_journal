@@ -80,3 +80,30 @@ outputs Insulin, Glucagon
 inputs Acetate3, Propiate
 description "L-cell secretion"
 class peptide
+
+name Leptin
+shape rectangle
+color blue	
+outputs Leptin receptor, NPY, Insulin Receptr (muscle), Insulin Receptor (Liver), CART, AGRP, MCH, Brown Fat Cell, Alpha-MSH, 
+		Adiponenctin, Orexins, Canabinoids, Thyroid Hormones, Brown Fat Cell,  
+inputs NPY, Epinephrine, Brown Fat Cell (?), Testosterone, 
+description "makes cells more sensitive to insulin"
+class hormone
+
+name NPY
+shape rectangle 
+color Yellow	
+outputs Leptin, CRH, ACTH, Cortisol
+inputs CRH, Leptin, Insulin, Canabinoids, Stress, Fasting, 
+description "36-amino acid peptide with many functions"
+class peptide
+
+
+name CRH
+shape rectangle 
+color Blue	
+outputs POMC, NPY, Enkephalins, ACTH, Endorphins
+inputs Leptin, NPY
+description "41-amino acid peptide produced in reponse to stress"
+class Corticotropin-releasing hormone
+
