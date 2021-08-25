@@ -107,3 +107,25 @@ inputs Leptin, NPY
 description "41-amino acid peptide produced in reponse to stress"
 class Corticotropin-releasing hormone
 
+name Dopamine
+shape rectangle
+color teal
+inputs Ghrelin, Canabinoids, CART
+description functions as a nuerotrasmitter
+class organic_chemical
+
+name Ghrelin
+shape rectangle
+color yellow
+inputs OXM, Glucagon, Fasting, Insulin,
+outputs Dopamine, Insulin, HGH, CART,
+description "hunger hormone": produced by enteroendocrine
+class hormone
+
+name CART
+shape rectangle
+color blue
+inputs Ghrelin, Leptin
+outputs alpha-MSH, POMC
+description Interacts with dopamine circuits in the brain that control desire, craving, reward, addiction.
+class peptide
