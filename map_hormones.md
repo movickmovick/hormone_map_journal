@@ -40,13 +40,14 @@ inputs Adiponectin Insulin resistance Insulin Testosterone Glucagon Epinephrine 
 description recieved in the hypothalamus
 class monosaccharides
 
-name nitrosamine //what is a nitrate because a nitrosamine is formed when a protein reacts with a nitrate
+name nitrosamine 
 shape elipse
 color green 
 outputs insulin receptor
 inputs none
 description "the cancerous meat one" 
 class organic_compound
+question what is a nitrate because a nitrosamine is formed when a protein reacts with a nitrate
 
 name ocytocin
 shape rectangle
