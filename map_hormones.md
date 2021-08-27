@@ -157,3 +157,31 @@ inputs Leptin, CART, POMC, Corisol
 outputs none
 Description Several Functions: protects the brain from infalmation. regulate melanin pigment in skin and 	      hair, sebum secretion, temperature regulation, pain control, sex behaviors, learning...
 class hormone
+
+name Cortisol
+class ?
+
+name GLP-1
+class peptide
+description "decreases hunger by slowing acid release into the stomach, and slows the emptying of the stomach"
+shape rectangle
+color teal
+inputs acetate, Propionate
+outputs Insulin, Glucagon
+
+name Glucagon
+class hormone
+description "The glucose (loci: liver) accelerator pedal; produced in the pancreas by the alpha cells; appetite suppressant; reduces ghrelin"
+shape rectangle
+color blue
+inputs GIP, GLP-1, OXM, fasting
+outputs Ghrelin, Glucose
+
+name OXM
+class hormone
+description "secreted, like GLP-1 and PYY, when food is ingested and it is secreted in proportion to the calories consumed; it acts as a satiety signal;
+	     OXM, or Oxynyomodulin reduceds the hunger hormone ghrelin"
+shape rectangle
+color blue
+inputs none
+outputs ghrelin, glucagon, insullin
