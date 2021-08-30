@@ -43,7 +43,7 @@ class monosaccharides
 name nitrosamine 
 shape elipse
 color green 
-outputs insulin receptor
+outputs insulin receptor (muscle cell)
 inputs none
 description "the cancerous meat one" 
 class organic_compound
@@ -178,10 +178,79 @@ inputs GIP, GLP-1, OXM, fasting
 outputs Ghrelin, Glucose
 
 name OXM
-class hormone
+class peptide
 description "secreted, like GLP-1 and PYY, when food is ingested and it is secreted in proportion to the calories consumed; it acts as a satiety signal;
 	     OXM, or Oxynyomodulin reduceds the hunger hormone ghrelin"
 shape rectangle
 color blue
 inputs none
-outputs ghrelin, glucagon, insullin
+outputs ghrelin, glucagon, insulin
+
+name CCK
+class unknown
+description related to the eating system where it relates to hunger suppression. when you fast this kicks in.
+shape rectangle
+color blue
+inputs PP
+outputs none
+
+name PP
+class unknown
+description kicks in when fast and accelerates towards CCK; pings on the same lines as Glucagon and Ghrelin;
+shape rectangle
+color blue
+inputs fasting
+outputs CCK
+
+name fasting
+description "human control factor"
+shape elipse
+color grey
+inputs none
+outputs Glucagon, PP, Leptin Receptor (Fat cell);
+
+name stress
+description "human control factor"
+shape elipse
+color grey
+inputs none
+outputs AGRP, NPY
+
+name excercise
+description "human control factor"
+shape elipse
+color grey
+inputs none
+outputs Irisin, insulin receptor(Muscle Cell)
+
+name fiber
+description "human control factor"
+shape elipse
+color grey
+inputs none
+outputs Gut-Microbes
+
+name Gut-Microbes
+description "human control factor (?)"
+shape elipse
+color grey
+inputs Fiber
+outputs Acetate, Propionate
+
+name Acetate 
+shape elipse
+color green 
+outputs PYY
+inputs Gut-Microbes
+description "messenger"; acetate may regulate appetite possibly through central hypothalamic mechanisms 
+			and satiety through acetate-induced or gut hormone-induced vagal activation.
+class salt formed with acetic acid and a base; helps to keep your gut environment stable
+question how come acetate reacts violently?
+
+name PYY
+description active function when the body isn't eating, thinking of eating (?); relays; 
+shape rectangle
+color blue
+inputs fasting, acetate, Propiate
+outputs none
+class gut-hormone
