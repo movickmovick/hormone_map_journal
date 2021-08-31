@@ -254,3 +254,43 @@ color blue
 inputs fasting, acetate, Propiate
 outputs none
 class gut-hormone
+
+name HGH (Human Growth Hormone)
+shape rectangle 
+color green
+description Pitutitary production (brain base); accelerates fat loss; 
+class hormone
+inputs sleep_deprivation, Alcohol, Ghrelin, insulin;	
+outputs insulin, IGF-1;
+
+name IGF-1
+shape ellipse
+color green
+description insulin growth factor that spurts growth in puberty; binds to the insulin receptor, only 1 percent.
+class hormone
+inputs HGH. why? 
+outputs vitamin D3
+
+name Irisin
+shape rectangle
+color Irisin
+description hormone produced when excercising
+class hormone
+inputs excercise
+outputs Brown_Fat_Cells
+
+name Brown_fat_cells
+shape white
+color square
+description
+inputs Irisin, Cold_exposure, Polyphenols, Orexins, Leptin;
+outputs none (?)
+
+name Orexins
+shape rectangle
+color teal
+description
+inputs
+outputs
+
+
